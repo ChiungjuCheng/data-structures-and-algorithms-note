@@ -31,6 +31,8 @@ complete binary tree: node沒有到達最大量數量，但每個node指向的no
 
 2. inorder traversal : 左-中-右。走到不能往左邊走，就把值(parent)印出來並且return，往右邊走。
 可以用recusive的方式去實作，也可以用stack實現。
+[Q: binary-tree-inorder-traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/) 
+
 3. postrder: 最後才把值印出來。
 4. Level-order : 把同一層的node都先印出來，可以用queue實現，將所有child node放入queue直到沒有child。
 
