@@ -2,7 +2,7 @@
 Given the root of a binary tree, return the preorder traversal of its nodes' values.
 
 # Solution
-time O(n) 
+1. iterative way time O(n) 
 ```java
 class Solution {
     
@@ -19,11 +19,7 @@ class Solution {
         
         TreeNode currentNode = root;
                 
-        while(!rightChildren.empty() || currentNode != null ){
-            
-            if(currentNode == null){
-              currentNode = rightChildren.pop();
-            }
+        while(currentNode != null){
             
             result.add(currentNode.val);
             
@@ -32,9 +28,35 @@ class Solution {
             }
             
             currentNode = currentNode.left;
+            
+            if(currentNode == null && (!rightChildren.empty())){
+              currentNode = rightChildren.pop();
+            }
         }
         
         return result;
+    }
+}
+```
+2.  Recursive solution
+```java
+class Solution {
+    
+    public List<Integer> preorderTraversal(TreeNode root) {
+        List<Integer> result = new ArrayList<>();
+        addToResultByRecursive(root, result);
+        return result;
+    }
+    
+    private void addToResultByRecursive(TreeNode current, List<Integer> result){
+        if(current == null){
+            return;
+        }
+        result.add(current.val);
+        
+        addToResultByRecursive(current.left, result);
+        addToResultByRecursive(current.right, result);
+        
     }
 }
 ```
