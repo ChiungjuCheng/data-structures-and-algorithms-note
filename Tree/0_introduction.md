@@ -24,13 +24,13 @@ complete binary tree: node沒有到達最大量數量，但每個node指向的no
 * L：移動到left child。
 * R：移動到right child。
 
-1. preorder(VLR) : 中-左-右。到達一個新的subtree時，先把root印出，接著往左邊走，並依照相同規則印出該節點後，若該節點沒有任何的子節點，則回到上一層，並且印出該層的右節點。
+1. preorder(VLR) : 中-左-右。到達一個新的subtree時，先把root印出，接著往左邊走，並依照相同規則印出該節點後，若該節點沒有任何的子節點，則回到上一層，並且印出該層的右節點。  
    [Q: binary-tree-preorder-traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/)  
 
    可以使用Stack方法或是遞迴方法，使用Stack儲存每個還未走到的右節點。當左節點走完時，就需要走上一層的左節點，當該右節點的subtree全部走完後才會再走回更上一層的右節點，依照這個特性，每次都要先處理最後遇到的右節點，因此使用stack。
 
 2. inorder traversal : 左-中-右。走到不能往左邊走，就把值(parent)印出來並且return，往右邊走。
-可以用recusive的方式去實作，也可以用stack實現。
+可以用recusive的方式去實作，也可以用stack實現。  
 [Q: binary-tree-inorder-traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/) 
 
 3. postrder: 最後才把值印出來。
