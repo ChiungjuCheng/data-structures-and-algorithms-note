@@ -1,5 +1,6 @@
 
 # Trees 
+一個undirected graph是connected且沒有cycle為Trees。G有n - 1個edges。 
 ## 名詞定義
 degree (分歧度): 一個node能指向幾個node
 
