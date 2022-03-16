@@ -21,6 +21,7 @@
 ### 應用
 1. 求得最短距離
 2. 求得能夠與點S相連的所有點 - Connected component
+3. Bipartite graph
 
 ### BFS使用Queue實現: 
 步驟和DFS一樣，只是換成Queue。
